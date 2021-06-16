@@ -9,6 +9,8 @@ gem 'rails', '~> 5.2.6'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'devise', '~> 4.8'
 gem 'aasm', '~> 5.2'
+gem 'friendly_id', '~> 5.4', '>= 5.4.2'
+gem 'babosa', '~> 1.0', '>= 1.0.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
