@@ -13,6 +13,8 @@ class Story < ApplicationRecord
 
   # scopes
   default_scope { where(deleted_at: nil) }
+  # scope :published_stories, -> { where(status: 'published') }
+  # 使用 aasm 不用寫 scope
 
   # instance methods
   def destroy
