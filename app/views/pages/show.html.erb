@@ -1,1 +1,44 @@
-<h1 class="title">show</h1>
+<section class="columns has-text-centered story-content">
+  <section class="column is-offset-3 is-6">
+    <h1 class="title"><%= @story.title %></h1>
+  
+  <span class="profile">
+    <%= image_tag @story.user.avatar.variant(resize: '50x50'), class: 'avatar' if @story.user.avatar.attached? %>
+    <span class="username"><%= @story.user.username %></span>
+    <a href="#" class="follow-button">Follow</a>
+  </span>
+
+  <article class="content">
+    <%= image_tag @story.cover_image.variant(resize: '1000x500'), class: 'cover-image' if @story.cover_image.attached? %>
+    <%= simple_format(@story.content) %>
+    <footer>
+      拍手 0
+    </footer>
+  </article>
+  <hr>
+   <section class="comments">
+    <h2>留言</h2>
+
+      <section class="comment-editor">
+        <form action="" mehtod="post">
+          <textarea name="" id="" cols="40" rows="8" class="textarea is-small"></textarea>
+          <button type="submit" class="button is-primary is-fullwidth">送出</button>
+        </form>
+      </section>
+
+      <section>
+        <article class="comment">
+          <span class="profile">
+            <img src="https://fakeimg.pl/50x50/" class="avatar">
+            <span class="username">張皓</span>
+          </span>
+         Dolorum veniam at iure beatae aliquid quibusdam accusamus cumque, quidem dolore nam id iste, quos nesciunt nulla molestias harum, quisquam impedit ipsam?
+        </article>
+
+        <article class="comment">
+         Dolorum veniam at iure beatae aliquid quibusdam accusamus cumque, quidem dolore nam id iste, quos nesciunt nulla molestias harum, quisquam impedit ipsam?
+        </article>
+      </section>
+   </section>
+  </section>
+</section>

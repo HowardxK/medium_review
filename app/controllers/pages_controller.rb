@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_action :find_story, only: [:show]
+
   def index
     # 只顯示上架的文章（不會顯示草稿）
     # @stories = Story.order(created_at: :desc).includes(:user)
@@ -13,5 +15,11 @@ class PagesController < ApplicationController
   end
 
   def user
+  end
+
+  private
+  
+  def find_story
+    @story = Story.friendly.find(params[:story_id])
   end
 end
