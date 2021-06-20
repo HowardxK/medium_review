@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
 
     if @comment.save
-      render js: "alert('error')"
+      render js: "alert('ok')"
     else
       render js: "alert('error')"
     end
