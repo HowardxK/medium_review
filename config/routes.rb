@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   
   resources :stories do
     resources :comments, only: [:create]
+    member do
+      post :clap
+    end
   end
 
   # /@howhow/文章標題
