@@ -2,6 +2,7 @@
   "name": "my_medium",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "@rails/webpacker": "5.4.0",
     "bulma": "^0.9.3",
     "stimulus": "^2.0.0",
