@@ -4,4 +4,8 @@ class Api::StoriesController < Api::BaseController
     story.increment!(:clap)
     render json: {status: story.clap}
   end
+
+  def bookmark
+    render json: {status: 'good'}
+  end
 end

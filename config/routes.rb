@@ -11,9 +11,12 @@ Rails.application.routes.draw do
       end
     end
 
+    # /api/stories/20/bookmark
+    # /api/stories/20/clap
     resources :stories, only: [] do
       member do
         post :clap
+        post :bookmark
       end
     end
   end
