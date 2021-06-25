@@ -21,6 +21,13 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  resources :users, only: [] do
+    collection do
+      get :pricing      # /users/pricing
+      get :payment      # /users/pricing
+    end
+  end
   
   resources :stories do
     resources :comments, only: [:create]
