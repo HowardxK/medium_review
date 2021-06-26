@@ -13,6 +13,8 @@ gem 'friendly_id', '~> 5.4', '>= 5.4.2'
 gem 'babosa', '~> 1.0', '>= 1.0.4'
 gem 'webpacker', '~> 5.4'
 gem 'paranoia', '~> 2.4', '>= 2.4.3'
+gem 'figaro', '~> 1.2'
+gem "braintree", "~> 4.2.0"
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

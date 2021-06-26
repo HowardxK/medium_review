@@ -7,10 +7,32 @@
     </div>
     <div class="media-content">
       <div class="content">
-        <strong></strong> <span></span>
+        <strong><%= @payment_type %></strong> <span>(USD <%= @fee %>)</span>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quas, illum inventore nemo quae minus vel itaque a laboriosam deleniti facere officiis consectetur omnis? Voluptates dignissimos ipsum illum non tempora.
+        </p>
       </div>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quas, illum inventore nemo quae minus vel itaque a laboriosam deleniti facere officiis consectetur omnis? Voluptates dignissimos ipsum illum non tempora.
-      </p>
     </div>
   </article>
 </div>
+
+<div id="dropin-container"></div>
+<button id="submit-button">Request payment method</button>
+
+<script src="https://js.braintreegateway.com/web/dropin/1.20.4/js/dropin.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function(event) {
+    var button = document.querySelector('#submit-button')
+
+    braintree.dropin.create({
+      authorization: '<%= @token %>',
+      container: '#dropin-container'
+    }, function(createErr, instance) {
+      button.addEventListener('click', function() {
+        instance.requestPaymentMethod(function(err, payload) {
+          // submit payload.nonce to your server
+        })
+      })
+    })
+  })
+</script>
