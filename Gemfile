@@ -6,7 +6,7 @@ ruby '2.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6'
 # Use postgresql as the database for Active Record
-
+gem 'pg', '~> 1.1'
 gem 'devise', '~> 4.8'
 gem 'aasm', '~> 5.2'
 gem 'friendly_id', '~> 5.4', '>= 5.4.2'
@@ -58,10 +58,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'foreman', '~> 0.87.2'
   gem 'hirb-unicode', '~> 0.0.5'
-end
-
-group :production do
-  gem 'pg', '>= 0.18', '< 2.0'
 end
 
 group :test do
